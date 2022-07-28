@@ -1,0 +1,100 @@
+@use './mixins' as *;
+@use './typography' as *;
+@use './variables' as *;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+// Removing whitespace
+body {
+    margin: 0 auto;
+    font-family: 'Proxima Nova Rg';
+    background-color: $primary-cta-color;
+    min-width: $mobile-min;
+    // max-width: $desktop-breakpoint;
+}
+
+// Page Header
+h1 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    @include tablet {
+        font-size: 33px;
+        line-height: 44px;
+        font-weight: 700;
+    }
+}
+
+// Section Header
+h2 {
+    color: $secondary-cta-color;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+    @include tablet {
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 700;
+    }
+}
+
+// Subheader
+h3 {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+    @include tablet {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 700;
+    }
+}
+
+// Body Copy
+p {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    @include tablet {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+}
+
+// All blue buttons except cancel button on upload video
+button {
+    font-family: 'Proxima Nova Rg';
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+    padding: 0.063rem 0.234rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    border-style: double;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include tablet {
+        min-width: 150px;
+        padding: 0 1rem;
+        margin: 0;
+    }
+}
+
+// Labels for all form inputs
+label {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+// textarea:focus, select:focus, input:focus {
+//     outline: 2px solid $primary-cta-color;
+//     font-family: 'Proxima Nova Rg';
+//     font-size: 13px;
+//     line-height: 18px;
+//     font-weight: 400;
+// }

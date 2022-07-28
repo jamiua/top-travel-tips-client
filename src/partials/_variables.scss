@@ -1,0 +1,20 @@
+// Note: No camelCasing should be used for sass variables, only kebab-case
+
+/*
+Mobile: 320px-767px
+Tablet: 768px-1279px
+Desktop: 1280px-1920px
+*/
+
+$mobile-min: 320px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+$desktop-max: 1920px;
+
+//BrainFlix Primary Colors
+$primary-text-color: #96a5a7; 
+$primary-cta-color: #748e95;
+$secondary-cta-color: #537784;
+$background-color:#537784;
+$divider-line-color: #b8bcb9;
+$cta-text-color: #fcfcfc; //White background-color
