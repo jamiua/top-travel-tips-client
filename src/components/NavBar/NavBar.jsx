@@ -4,7 +4,7 @@ import T3Logo from '../../assets/logos/t3logo.png';
 
 function NavBar() {
     return (
-        <div className="navbar">
+        <nav className="navbar">
             <div className="navbar__left">
                 <img className="navbar__left__logo" src={T3Logo} alt="Top Travel Tips Logo"/>
             </div>
@@ -19,7 +19,7 @@ function NavBar() {
             <div className="navbar__right">
                 <FaFacebookSquare className="navbar__right__icon"/> <FaTwitterSquare  className="navbar__right__icon"/> <FaInstagramSquare  className="navbar__right__icon"/>
             </div>
-        </div>
+        </nav>
     );
 }
 

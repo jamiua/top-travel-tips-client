@@ -1,0 +1,39 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+
+.header {
+    // margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // font-family: "Lora", serif;
+    color: $secondary-cta-color;
+
+    &__title {
+
+        &__small {
+            position: absolute;
+            top: 8%;
+            font-size: 1.5rem;
+        }
+
+        &__large {
+            position: absolute;
+            top: 10%;
+            font-size: 6.25rem;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 28rem;
+        // margin-top: 5rem;
+        object-fit: cover;
+    }
+
+    // background-image: url(../../assets/images/headerimg.jpeg);
+    // background-repeat: no-repeat;
+    // // background-position: 0 0;
+    // height: 100vh;
+    // width: 100vw;
+}
