@@ -1,7 +1,7 @@
 @use '../../partials/variables' as *;
 @use '../../partials/mixins' as *;
 
-.header {
+.hero {
     // margin-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@
         object-fit: cover;
     }
 
-    // background-image: url(../../assets/images/headerimg.jpeg);
+    // background-image: url(../../assets/images/heroimg.jpeg);
     // background-repeat: no-repeat;
     // // background-position: 0 0;
     // height: 100vh;

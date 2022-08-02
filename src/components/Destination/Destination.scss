@@ -1,0 +1,64 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+
+.destination {
+    width: 385px;
+    margin: 0px 25px 40px 25px;
+    display: flex;
+    flex-direction: column;
+
+    &__image {
+        width: 385px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 7px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__cat {
+        font-family: "Varela Round", Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+        color: $secondary-cta-color;
+        line-height: 19px;
+        margin-top: 15px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    &__title {
+        font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        font-weight: 900;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+
+    &__date {
+        font-family: "Lora", serif;
+        font-style: italic;
+        font-size: 13px;
+        font-weight: 400;
+        color: $secondary-cta-color;
+        margin-top: 15px;
+    }
+
+    &__desc {
+        font-family: "Varela Round", Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: $primary-text-color;
+        margin-top: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}

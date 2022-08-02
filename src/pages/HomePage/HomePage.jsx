@@ -1,12 +1,17 @@
 import './HomePage.scss';
-import Header from '../../components/Header/Header';
+import Hero from '../../components/Hero/Hero';
+import Destinations from '../../components/Destinations/Destinations';
+import SideBar from '../../components/SideBar/SideBar';
 
-function HomePage(props) {
+function HomePage() {
     return (
-        <div>
-            <Header />
-            <p>HomePage</p>
-        </div>
+        <>
+            <Hero />
+            <div className="home">
+                <Destinations />
+                <SideBar />
+            </div>
+        </>
     );
 }
 
