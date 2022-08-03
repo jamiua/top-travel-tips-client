@@ -1,6 +1,7 @@
 // import { Link } from "react-router-dom";
 import "./SideBar.scss";
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
+import bloggerImg from '../../assets/images/blogger.jpg';
 
 function SideBar() {
     return (
@@ -9,8 +10,8 @@ function SideBar() {
                 <span className="sidebar__title">about me</span>
                 <img
                     className="sidebar__item__img"
-                    src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/grandblog/demo/wp-content/uploads/2015/11/aboutme.jpg"
-                    alt=""
+                    src={bloggerImg}
+                    alt="Blogger Table"
                 />
                 <p className="sidebar__item__p">
                     Laboris sunt aute cupidatat velit magna velit ullamco dolore mollit
