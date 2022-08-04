@@ -1,3 +1,4 @@
+// import { Link } from "react-router-dom";
 import './NavBar.scss';
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
 import T3Logo from '../../assets/logos/t3logo.png';
@@ -10,14 +11,20 @@ function NavBar() {
             </section>
             <section className="navbar__center">
                 <ul className="navbar__center__list">
-                    <li className="navbar__center__list__item">home</li>
+                    <li className="navbar__center__list__item">
+                    {/* <Link className="link" to="/"> */}
+                        home
+                    {/* </Link> */}
+                    </li>
                     <li className="navbar__center__list__item">about</li>
                     <li className="navbar__center__list__item">contact</li>
-                    <li className="navbar__center__list__item">details</li>
+                    <li className="navbar__center__list__item">new destination</li>
                 </ul>
             </section>
             <section className="navbar__right">
-                <FaFacebookSquare className="navbar__right__icon"/> <FaTwitterSquare  className="navbar__right__icon"/> <FaInstagramSquare  className="navbar__right__icon"/>
+                <FaFacebookSquare className="navbar__right__icon"/> 
+                <FaTwitterSquare className="navbar__right__icon"/> 
+                <FaInstagramSquare className="navbar__right__icon"/>
             </section>
         </nav>
     );

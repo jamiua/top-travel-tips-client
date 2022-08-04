@@ -1,0 +1,81 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+
+.newdestination {
+    padding-top: 50px;
+
+    &__img {
+        margin-left: 150px;
+        width: 70vw;
+        height: 250px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    &__form {
+        position: relative;
+
+        &__content {
+            margin-left: 150px;
+            display: flex;
+            align-items: center;
+        }
+    
+        &__uploadicon {
+            width: 2rem;
+            height: 2rem;
+            font-size: 1rem;
+            border: 1px solid;
+            border-radius: 50%;
+            color: $background-color;
+            //refactor color
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    
+        &__input {
+            font-size: 30px;
+            border: none;
+            padding: 20px;
+            width: 70vw;
+            background-color: $primary-cta-color;
+    
+            &::placeholder {
+                color: rgb(189, 185, 185);
+                font-weight: 400;
+            }
+    
+            &:focus {
+                outline-style: none;
+            }
+        }
+    
+        &__text {
+            width: 70vw;
+            height: 100vh;
+            font-family: inherit;
+            font-size: 20px;
+        }
+    
+        &__submit {
+            position: absolute;
+            width: 5rem;
+            top: 20px;
+            right: 50px;
+            color: white;
+            background-color: teal;
+            padding: 10px;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: none;
+        }
+    }
+
+}

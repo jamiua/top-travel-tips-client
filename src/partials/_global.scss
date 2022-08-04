@@ -78,7 +78,7 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     @include tablet {
-        min-width: 150px;
+        width: 150px;
         padding: 0 1rem;
         margin: 0;
     }

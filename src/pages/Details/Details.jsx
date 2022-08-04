@@ -1,13 +1,12 @@
-import Sidebar from "../../components/SideBar/Sidebar";
-import DestinationInfo from "../../components/DestinationInfo/DestinationInfo";
-import "./details.scss";
-
+import "./Details.scss"; 
+import SideBar from '../../components/SideBar/SideBar';
+import DestinationInfo from '../../components/DestinationInfo/DestinationInfo';
 
 function Details() {
     return (
         <div className="details">
             <DestinationInfo />
-            <Sidebar />
+            <SideBar />
             
         </div>
     );
