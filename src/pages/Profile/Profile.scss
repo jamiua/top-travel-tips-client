@@ -1,0 +1,102 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+
+.profile {
+    display: flex;
+
+    &__container {
+        flex: 9;
+        padding: 20px;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__update {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: $secondary-cta-color;
+        }
+
+        &__delete {
+            color: red;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+        &__picture {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        &__icon {
+            width: 25px;
+            height: 25px;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            border-radius: 50%;
+            margin-left: 10px;
+            // Refactor color
+            color: $primary-text-color;
+            background-color: $cta-text-color;
+            cursor: pointer;
+        }
+        
+        &__input {
+            width: 30%;
+        }
+        
+        &__submit {
+            align-self: center;
+            width: 150px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 400;
+            color: $cta-text-color;
+            background-color: teal;
+            padding: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            &:hover {
+                background-color: rgb(1, 114, 114);
+            }
+        }
+    }
+}
+
+.profile__form__picture > img {
+    height: 70px;
+    width: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+  
+.profile__form > label {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.profile__form > input {
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+}
