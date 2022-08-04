@@ -4,13 +4,19 @@ import NavBar from './components/NavBar/NavBar';
 import HomePage from './pages/HomePage/HomePage';
 import Details from './pages/Details/Details';
 import NewDestination from './pages/NewDestination/NewDestination';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <Router className="App">
         <NavBar />
-        <HomePage />
-    </div>
+        <Switch>
+          <Route path="/" exact component = {HomePage}/>
+          <Route path="/destinations" component = {HomePage}/>
+          <Route path="destinationDetails/:id" component = {Details}/>
+          <Route path="/newDestination" component = {NewDestination}/>
+        </Switch>
+    </Router>
   );
 }
 

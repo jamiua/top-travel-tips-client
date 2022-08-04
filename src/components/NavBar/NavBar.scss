@@ -9,20 +9,25 @@
     top: 0;
     display: flex;
     align-items: center;
-
+    z-index: 999;
+    
     &__left {
         flex: 20%;
-
+        
         &__logo {
-        width: 18rem;
-        height: 2rem; 
+            width: 18rem;
+            height: 2rem; 
         }
     }
-
+    
     &__center {
         flex: 60%;
-
+        
+        
         &__list {
+            // Refactor link reset
+            @include reset-link;
+            
             @include reset-list;
             display: flex;
             justify-content: center;
@@ -37,6 +42,15 @@
 
     &__right {
         flex: 20%;
+
+        &__img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            cursor: pointer;
+        }
 
         &__icon {
             font-size: 1.5rem;
