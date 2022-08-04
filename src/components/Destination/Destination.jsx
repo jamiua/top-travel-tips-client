@@ -9,7 +9,7 @@ function Destination({img}) {
             src={img}
             alt=""
             />
-            <div className="destination__info">
+            <div className="destination__details">
                 <div className="destinationCats">
                     <span className="destination__cat">
                     {/* <Link className="link" to="/destinations?cat=Canada"> */}
