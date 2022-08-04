@@ -65,31 +65,12 @@ p {
     }
 }
 
-// All blue buttons except cancel button on upload video
-button {
-    font-family: 'Proxima Nova Rg';
-    font-size: 12px;
-    line-height: 20px;
-    font-weight: 700;
-    padding: 0.063rem 0.234rem;
-    border-radius: 0.25rem;
-    width: 100%;
-    border-style: double;
-    text-transform: uppercase;
-    cursor: pointer;
-    @include tablet {
-        width: 150px;
-        padding: 0 1rem;
-        margin: 0;
-    }
-}
-
 // Labels for all form inputs
-label {
-    font-size: 12px;
-    line-height: 20px;
-    font-weight: 700;
-}
+// label {
+//     font-size: 12px;
+//     line-height: 20px;
+//     font-weight: 700;
+// }
 
 // textarea:focus, select:focus, input:focus {
 //     outline: 2px solid $primary-cta-color;

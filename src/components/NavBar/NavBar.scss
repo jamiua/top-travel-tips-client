@@ -22,20 +22,24 @@
     
     &__center {
         flex: 60%;
+    }
+
+    &__list {
+        // Refactor link reset
+        @include reset-link;
         
+        @include reset-list;
+        display: flex;
+        justify-content: center;
         
-        &__list {
-            // Refactor link reset
-            @include reset-link;
-            
-            @include reset-list;
-            display: flex;
-            justify-content: center;
-            
-            &__item {
+        &__item {
             text-transform: uppercase;
             margin-right: 1rem;
             font-weight: 300;
+            cursor: pointer;
+
+            &:hover {
+                color: $secondary-cta-color;
             }
         }
     }
@@ -49,13 +53,6 @@
             border-radius: 50%;
             object-fit: cover;
             margin-right: 15px;
-            cursor: pointer;
-        }
-
-        &__icon {
-            font-size: 1.5rem;
-            margin-right: 0.75rem;
-            color: $secondary-cta-color;
             cursor: pointer;
         }
     }

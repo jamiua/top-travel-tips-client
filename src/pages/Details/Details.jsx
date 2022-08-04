@@ -7,7 +7,6 @@ function Details() {
         <div className="details">
             <DestinationDetails />
             <SideBar />
-            
         </div>
     );
 }

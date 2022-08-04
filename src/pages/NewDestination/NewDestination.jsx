@@ -1,4 +1,4 @@
-import "./NewDestination.scss";
+import './NewDestination.scss';
 import uploadIcon from "../../assets/icons/upload.svg";
 
 function NewDestination() {
