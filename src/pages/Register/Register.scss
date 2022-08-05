@@ -1,7 +1,7 @@
 @use '../../partials/variables' as *;
 @use '../../partials/mixins' as *;
 
-.login {
+.register {
     height: calc(100vh - 50px);
     display: flex;
     flex-direction: column;
@@ -36,7 +36,7 @@
         &__button {
             margin-top: 20px;
             cursor: pointer;
-            background-color: lightcoral;
+            background-color: teal;
             color: white;
             padding: 10px;
             border: none;
@@ -49,11 +49,11 @@
         }
     }
 
-    &__register__button {
+    &__login__button {
         position: absolute;
         top: 60px;
         right: 20px;
-        background-color: teal;
+        background-color: lightcoral;
         cursor: pointer;
         padding: 10px;
         border: none;
