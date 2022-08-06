@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import T3Logo from '../../assets/logos/t3logo.png';
 
 function NavBar() {
-    const user = true;
+    const user = false;
     return (
         <nav className="navbar">
             <section className="navbar__left">
@@ -28,9 +28,6 @@ function NavBar() {
                 </ul>
             </section>
             <section className="navbar__right">
-                {/* <FaFacebookSquare className="navbar__right__icon"/> 
-                <FaTwitterSquare className="navbar__right__icon"/> 
-                <FaInstagramSquare className="navbar__right__icon"/> */}
                 {user ? (
                     <Link className="link" to="/profile">
                         <img
@@ -53,6 +50,9 @@ function NavBar() {
                         </li>
                     </ul>
                 )}
+                {/* <FaFacebookSquare className="navbar__right__icon"/> 
+                <FaTwitterSquare className="navbar__right__icon"/> 
+                <FaInstagramSquare className="navbar__right__icon"/> */}
             </section>
         </nav>
     );
