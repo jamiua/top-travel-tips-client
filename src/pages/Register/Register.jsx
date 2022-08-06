@@ -5,6 +5,8 @@ function Register() {
         <div className="register">
             <h2 className="register__title">Register</h2>
             <form className="register__form">
+                <label>Username</label>
+                <input className="register__form__input" type="text" placeholder="Enter your username..." />
                 <label>Email</label>
                 <input className="register__form__input" type="text" placeholder="Enter your email..." />
                 <label>Password</label>

@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Destination.scss";
 
 function Destination({img}) {
@@ -23,9 +23,9 @@ function Destination({img}) {
                     </span>
                 </div>
                 <span className="destination__title">
-                    {/* <Link to="/destination/abc" className="link"> */}
+                    <Link to="/destination/abc" className="link">
                     Lorem ipsum dolor sit amet
-                    {/* </Link> */}
+                    </Link>
                 </span>
                 <hr />
                 <span className="destination__date">1 hour ago</span>

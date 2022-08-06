@@ -65,6 +65,10 @@ p {
     }
 }
 
+.link {
+    @include reset-link;
+}
+
 // Labels for all form inputs
 // label {
 //     font-size: 12px;

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import T3Logo from '../../assets/logos/t3logo.png';
 
 function NavBar() {
+    const user = true;
     return (
         <nav className="navbar">
             <section className="navbar__left">
@@ -23,31 +24,35 @@ function NavBar() {
                         new destination
                     </Link>
                     </li>
+                    {user && <li className="navbar__list__item">logout</li>}
                 </ul>
             </section>
             <section className="navbar__right">
                 {/* <FaFacebookSquare className="navbar__right__icon"/> 
                 <FaTwitterSquare className="navbar__right__icon"/> 
                 <FaInstagramSquare className="navbar__right__icon"/> */}
-                <Link className="link" to="/profile">
-                    <img
-                    className="navbar__right__img"
-                    src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                    alt=""
-                    />
-                </Link>
-                <ul className="navbar__list">
-                    <li className="navbar__list__item">
-                        <Link className="link" to="/login">
-                            login
-                        </Link>
-                    </li>
-                    <li className="navbar__list__item">
-                        <Link className="link" to="/register">
-                            register
-                        </Link>
-                    </li>
-                </ul>
+                {user ? (
+                    <Link className="link" to="/profile">
+                        <img
+                        className="navbar__right__img"
+                        src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                        alt=""
+                        />
+                    </Link>
+                ) : (
+                    <ul className="navbar__list">
+                        <li className="navbar__list__item">
+                            <Link className="link" to="/login">
+                                login
+                            </Link>
+                        </li>
+                        <li className="navbar__list__item">
+                            <Link className="link" to="/register">
+                                register
+                            </Link>
+                        </li>
+                    </ul>
+                )}
             </section>
         </nav>
     );

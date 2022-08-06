@@ -1,5 +1,5 @@
-import Destination from "../Destination/Destination";
 import "./Destinations.scss";
+import Destination from "../Destination/Destination";
 
 function Destinations() {
     return (

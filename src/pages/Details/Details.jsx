@@ -1,6 +1,6 @@
 import "./Details.scss"; 
-import SideBar from '../../components/SideBar/SideBar';
 import DestinationDetails from '../../components/DestinationDetails/DestinationDetails';
+import SideBar from '../../components/SideBar/SideBar';
 
 function Details() {
     return (

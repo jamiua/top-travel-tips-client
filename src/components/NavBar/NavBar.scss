@@ -25,9 +25,6 @@
     }
 
     &__list {
-        // Refactor link reset
-        @include reset-link;
-        
         @include reset-list;
         display: flex;
         justify-content: center;
@@ -46,6 +43,13 @@
 
     &__right {
         flex: 20%;
+
+        // &__icon {
+        //     font-size: 20px;
+        //     margin-right: 10px;
+        //     color: $secondary-cta-color;
+        //     cursor: pointer;
+        // }
 
         &__img {
             width: 40px;

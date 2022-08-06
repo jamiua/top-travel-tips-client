@@ -26,16 +26,37 @@
             cursor: pointer;
         }
     }
-
+    
     &__form {
         display: flex;
         flex-direction: column;
+        
+        & > label {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        
+        & > input {
+            color: gray;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            height: 30px;
+            border: none;
+            border-bottom: 1px solid lightgray;
+        }
 
         &__picture {
             display: flex;
             align-items: center;
             margin-top: 10px;
             margin-bottom: 10px;
+            
+            & > img {
+                height: 70px;
+                width: 70px;
+                border-radius: 20px;
+                object-fit: cover;
+            }
         }
 
         &__icon {
@@ -78,25 +99,4 @@
             }
         }
     }
-}
-
-.profile__form__picture > img {
-    height: 70px;
-    width: 70px;
-    border-radius: 20px;
-    object-fit: cover;
-}
-  
-.profile__form > label {
-    font-size: 20px;
-    margin-top: 20px;
-}
-
-.profile__form > input {
-    color: gray;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 30px;
-    border: none;
-    border-bottom: 1px solid lightgray;
 }
