@@ -10,15 +10,13 @@ function HomePage() {
     const [destinationsData, setDestinations] = useState([]);
     const { search } = useLocation();
 
-    // console.log({ search });
-
     useEffect(() => {
-      const getDestinations = async () => {
+        const getDestinations = async () => {
         // Use location hook to get path for individual user link
         const response = await axios.get("/destinations" + search);
         setDestinations(response.data);
       };
-      getDestinations();
+        getDestinations();
     }, [search]);
 
     return (
