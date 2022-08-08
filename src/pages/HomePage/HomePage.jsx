@@ -6,15 +6,16 @@ import Hero from '../../components/Hero/Hero';
 import Destinations from '../../components/Destinations/Destinations';
 import SideBar from '../../components/SideBar/SideBar';
 
-
 function HomePage() {
     const [destinationsData, setDestinations] = useState([]);
     const { search } = useLocation();
-  
+
+    // console.log({ search });
+
     useEffect(() => {
       const getDestinations = async () => {
+        // Use location hook to get path for individual user link
         const response = await axios.get("/destinations" + search);
-        console.log(response.data)
         setDestinations(response.data);
       };
       getDestinations();

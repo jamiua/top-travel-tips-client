@@ -2,14 +2,16 @@ import "./DestinationDetails.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
 import editIcon from '../../assets/icons/pen-to-square.svg';
 import deleteIcon from '../../assets/icons/trash-can.svg';
 
 function DestinationDetails() {
     const location = useLocation();
-    // Use location hook to get path for individual destinaion details
+    // Use location hook to get path for individual destination details
     const path = location.pathname.split("/")[2];
-    // Initial state for individual destination detail is set to empty array
+    console.log(location);
+    // Initial state for individual destination detail is set to empty object
     const [singleDestination, setDestination] = useState({});
     const postDate = new Date(singleDestination.createdAt).toDateString('en-US');
 
@@ -39,9 +41,9 @@ function DestinationDetails() {
                 <span>
                     Author:
                     <b className="destinationdetails__author">
-                    {/* <Link className="link" to="/destinations?username=Test"> */}
+                    <Link to={`/?user=${singleDestination.username}`} className="link">
                         {singleDestination.username}
-                    {/* </Link> */}
+                    </Link>
                     </b>
                 </span>
                 <span>{postDate}</span>

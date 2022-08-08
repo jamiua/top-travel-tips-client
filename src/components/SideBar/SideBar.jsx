@@ -1,11 +1,12 @@
-// import { Link } from "react-router-dom";
 import "./SideBar.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
 import bloggerImg from '../../assets/images/blogger.jpg';
 
 function SideBar() {
+    // Initial state for categories is set to empty array
     const [allCategories, setCategories] = useState([]);
 
     useEffect(() => {
@@ -19,29 +20,24 @@ function SideBar() {
     return (
         <aside className="sidebar">
              <section className="sidebar__item">
-                <span className="sidebar__title">about me</span>
+                <span className="sidebar__title">explore now</span>
                 <img
                     className="sidebar__item__img"
                     src={bloggerImg}
                     alt="Blogger Table"
                 />
                 <p className="sidebar__item__p">
-                    Laboris sunt aute cupidatat velit magna velit ullamco dolore mollit
-                    amet ex esse.Sunt eu ut nostrud id quis proident.
+                    The countries below are open for exploration. Select where you would like to see travel tips from.
                 </p>
             </section>
             <section className="sidebar__item">
                 <span className="sidebar__title">countries</span>
                 <ul className="sidebar__list">
-                    {/* <Link className="link" to="/destinations?cat=Canada"> */}
-                        {allCategories.map((category) => (
-                            <li key={category._id} className="sidebar__list__item">
-                                {/* <Link className="link" to="/destinations?cat=States"> */}
-                                    {category.categname}
-                                {/* </Link> */}
-                            </li>
-                        ))}
-                    {/* </Link> */}
+                    {allCategories.map((oneCategory) => (
+                        <Link to={`/destinations/?category=${oneCategory.categname}`} className="link" >
+                            <li key={oneCategory._id} className="sidebar__list__item">{oneCategory.categname}</li>
+                        </Link>
+                    ))}
                 </ul>
             </section>
             <section className="sidebar__item">
