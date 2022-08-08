@@ -1,9 +1,21 @@
 // import { Link } from "react-router-dom";
 import "./SideBar.scss";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
 import bloggerImg from '../../assets/images/blogger.jpg';
 
 function SideBar() {
+    const [allCategories, setCategories] = useState([]);
+
+    useEffect(() => {
+        const getCategories = async () => {
+          const response = await axios.get("/categories");
+          setCategories(response.data);
+        };
+        getCategories();
+    }, []);
+
     return (
         <aside className="sidebar">
              <section className="sidebar__item">
@@ -19,38 +31,17 @@ function SideBar() {
                 </p>
             </section>
             <section className="sidebar__item">
-                <span className="sidebar__title">categories</span>
+                <span className="sidebar__title">countries</span>
                 <ul className="sidebar__list">
-                    <li className="sidebar__list__item">
-                        {/* <Link className="link" to="/destinations?cat=Canada"> */}
-                            Canada
-                        {/* </Link> */}
-                    </li>
-                    <li className="sidebar__list__item">
-                        {/* <Link className="link" to="/destinations?cat=States"> */}
-                            United States
-                        {/* </Link> */}
-                    </li>
-                    <li className="sidebar__list__item">
-                        {/* <Link className="link" to="/destinations?cat=Mexico"> */}
-                            Mexico
-                        {/* </Link> */}
-                    </li>
-                    <li className="sidebar__list__item">
-                        {/* <Link className="link" to="/destinations?cat=Korea"> */}
-                            Korea
-                        {/* </Link> */}
-                    </li>
-                    <li className="sidebar__list__item">
-                        {/* <Link className="link" to="/destinations?cat=Palestine"> */}
-                            Palestine
-                        {/* </Link> */}
-                    </li>
-                    <li className="sidebar__list__item">
-                        {/* <Link className="link" to="/destinations?cat=UAE"> */}
-                            UAE
-                        {/* </Link> */}
-                    </li>
+                    {/* <Link className="link" to="/destinations?cat=Canada"> */}
+                        {allCategories.map((category) => (
+                            <li key={category._id} className="sidebar__list__item">
+                                {/* <Link className="link" to="/destinations?cat=States"> */}
+                                    {category.categname}
+                                {/* </Link> */}
+                            </li>
+                        ))}
+                    {/* </Link> */}
                 </ul>
             </section>
             <section className="sidebar__item">

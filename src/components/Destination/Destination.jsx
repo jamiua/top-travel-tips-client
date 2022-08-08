@@ -1,40 +1,35 @@
 import { Link } from "react-router-dom";
 import "./Destination.scss";
 
-function Destination({img}) {
+// const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
+function Destination({singleDestination, img}) {
+    // const PF = `${SERVER_URL}/images/`;
+    const postDate = new Date(singleDestination.createdAt).toDateString('en-US');
     return (
         <main className="destination">
-            <img
-            className="destination__image"
-            src={img}
-            alt=""
-            />
+            {singleDestination.image && <img className="destination__image" src={img} alt="" /> }
+            
             <div className="destination__details">
                 <div className="destinationCats">
-                    <span className="destination__cat">
-                    {/* <Link className="link" to="/destinations?cat=Canada"> */}
-                        Canada
-                    {/* </Link> */}
-                    </span>
-                    <span className="destination__cat">
-                    {/* <Link className="link" to="/destinations?cat=States"> */}
-                        United States
-                    {/* </Link> */}
-                    </span>
+                    {singleDestination.categories.map((categories) => (
+                        <span key={categories._id} className="destination__cat">
+                        {/* <Link className="link" to="/destinations?cat=Canada"> */}
+                            {categories.categname}
+                        {/* </Link> */}
+                        </span>
+                    ))}
                 </div>
                 <span className="destination__title">
-                    <Link to="/destination/abc" className="link">
-                    Lorem ipsum dolor sit amet
+                    <Link to={`/destination/${singleDestination._id}`} className="link">
+                    {singleDestination.title}
                     </Link>
                 </span>
                 <hr />
-                <span className="destination__date">1 hour ago</span>
+                <span className="destination__date">{postDate}</span>
             </div>
             <p className="destination__desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-            officia architecto deserunt deleniti? Labore ipsum aspernatur magnam
-            fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
-            atque, exercitationem quibusdam, reiciendis odio laboriosam?
+            {singleDestination.desc}
             </p>
       </main>
     );

@@ -9,7 +9,7 @@ import NewDestination from './pages/NewDestination/NewDestination';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-  const currentUser = false;
+  const currentUser = true;
   return (
     <Router className="App">
         <NavBar />
