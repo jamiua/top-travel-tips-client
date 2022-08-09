@@ -2,9 +2,17 @@ import './NavBar.scss';
 import { Link } from "react-router-dom";
 // import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
 import T3Logo from '../../assets/logos/t3logo.png';
+import { useContext } from "react";
+import { Context } from "../../context/Context";
 
 function NavBar() {
-    const user = false;
+    // Import user and dispatch from contexts
+    const {user, dispatch} = useContext(Context);
+
+    const handleUserLogout = () => {
+        dispatch({ type: "LOGOUT" });
+    };
+    
     return (
         <nav className="navbar">
             <section className="navbar__left">
@@ -17,14 +25,16 @@ function NavBar() {
                         home
                     </Link>
                     </li>
-                    <li className="navbar__list__item">about</li>
-                    <li className="navbar__list__item">contact</li>
+                    {/* <li className="navbar__list__item">about</li>
+                    <li className="navbar__list__item">contact</li> */}
                     <li className="navbar__list__item">
-                    <Link className="link" to="/newDestination">
-                        new destination
+                    <Link className="link" to="/newTopTravelTip">
+                        add top travel tip
                     </Link>
                     </li>
-                    {user && <li className="navbar__list__item">logout</li>}
+                    <li className="navbar__list__item" onClick={handleUserLogout}>
+                        {user && "LOGOUT"}
+                    </li>
                 </ul>
             </section>
             <section className="navbar__right">
@@ -32,7 +42,7 @@ function NavBar() {
                     <Link className="link" to="/profile">
                         <img
                         className="navbar__right__img"
-                        src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                        src={user.profilePic}
                         alt=""
                         />
                     </Link>

@@ -7,9 +7,12 @@ import Profile from './pages/Profile/Profile';
 import Details from './pages/Details/Details';
 import NewDestination from './pages/NewDestination/NewDestination';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 function App() {
-  const currentUser = false;
+  // Get user information from context
+  const {user} = useContext(Context);
   return (
     <Router className="App">
         <NavBar />
@@ -21,17 +24,17 @@ function App() {
             <HomePage/>
           </Route>
           <Route path="/register">
-            {currentUser ? <HomePage/> : <Register/>}
+            {user ? <HomePage/> : <Register/>}
           </Route>
           <Route path="/login">
-            {currentUser ? <HomePage/> : <Login/>}
+            {user ? <HomePage/> : <Login/>}
           </Route>
           <Route path="/destination/:id" component = {Details}/>
-          <Route path="/newDestination">
-            {currentUser ? <NewDestination/> : <Login/>}
+          <Route path="/newTopTravelTip">
+            {user ? <NewDestination/> : <Login/>}
           </Route>
           <Route path="/profile">
-            {currentUser ? <Profile/> : <Login/>}
+            {user ? <Profile/> : <Login/>}
           </Route>
         </Switch>
     </Router>
@@ -39,11 +42,3 @@ function App() {
 }
 
 export default App;
-
-// <Route path="/" exact component = {HomePage}/>
-// <Route path="/destinations" component = {HomePage}/>
-// <Route path="/register" component = {user ? {HomePage} : {Register}}/>
-// <Route path="/login" component = {user ? {HomePage} : {Login}}/>
-// <Route path="/destination/:id" component = {Details}/>
-// <Route path="/newDestination" component = {user ? {NewDestination} : {Login}}/>
-// <Route path="/profile" component = {user ? {Profile} : {Login}} />

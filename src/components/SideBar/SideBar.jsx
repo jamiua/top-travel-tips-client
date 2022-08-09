@@ -34,8 +34,8 @@ function SideBar() {
                 <span className="sidebar__title">countries</span>
                 <ul className="sidebar__list">
                     {allCategories.map((oneCategory) => (
-                        <Link to={`/?country=${oneCategory.categname}`} className="link" >
-                            <li key={oneCategory._id} className="sidebar__list__item">{oneCategory.categname}</li>
+                        <Link to={`/?country=${oneCategory.categname}`} className="link" key={oneCategory._id}>
+                            <li  className="sidebar__list__item">{oneCategory.categname}</li>
                         </Link>
                     ))}
                 </ul>

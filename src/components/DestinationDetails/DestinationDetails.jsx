@@ -10,7 +10,7 @@ function DestinationDetails() {
     const location = useLocation();
     // Use location hook to get path for individual destination details
     const path = location.pathname.split("/")[2];
-    console.log(location);
+    // console.log(location);
     // Initial state for individual destination detail is set to empty object
     const [singleDestination, setDestination] = useState({});
     const postDate = new Date(singleDestination.createdAt).toDateString('en-US');

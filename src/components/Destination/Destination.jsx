@@ -1,26 +1,26 @@
 import { Link } from "react-router-dom";
 import "./Destination.scss";
 
-// const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
-function Destination({singleDestination, img}) {
-    // const PF = `${SERVER_URL}/images/`;
+function Destination({singleDestination}) {
+    const publicFolder = `${SERVER_URL}/images/`;
     const postDate = new Date(singleDestination.createdAt).toDateString('en-US');
     return (
         <main className="destination">
-            {singleDestination.image && <img className="destination__image" src={img} alt="" /> }
+            {/* Refactor img source to generic link */}
+            {singleDestination.image && <img className="destination__image" src={publicFolder + singleDestination.photo} alt="" /> }
             
             <div className="destination__details">
                 <div className="destinationCats">
                     {singleDestination.categories.map((categories) => (
-                        <span key={categories._id} className="destination__cat">
-                        {/* <Link className="link" to="/destinations?cat=Canada"> */}
+                        <span key={categories._id} className="destination__category">
                             {categories.categname}
-                        {/* </Link> */}
                         </span>
                     ))}
                 </div>
                 <span className="destination__title">
+                    {/* Refactor <Link className="link" to="/destinations?cat=Canada"> */}
                     <Link to={`/destination/${singleDestination._id}`} className="link">
                     {singleDestination.title}
                     </Link>
