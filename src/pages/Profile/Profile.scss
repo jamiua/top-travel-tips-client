@@ -17,7 +17,7 @@
         &__update {
             font-size: 2rem;
             margin-bottom: 1rem;
-            color: $secondary-cta-color;
+            color: $secondary-text-color;
         }
 
         &__delete {
@@ -34,6 +34,7 @@
         & > label {
             font-size: 20px;
             margin-top: 20px;
+            color: $secondary-text-color;
         }
         
         & > input {
@@ -71,7 +72,7 @@
             margin-left: 10px;
             // Refactor color
             color: $primary-text-color;
-            background-color: $cta-text-color;
+            background-color: $secondary-text-color;
             cursor: pointer;
         }
         
@@ -85,7 +86,7 @@
             border: none;
             border-radius: 10px;
             font-weight: 400;
-            color: $cta-text-color;
+            color: $secondary-text-color;
             background-color: teal;
             padding: 10px;
             margin-top: 20px;

@@ -6,8 +6,8 @@ function Destinations({ allDestinations }) {
     return (
         <div className="destinations">
             {/* Map through destinations endpoint and return all destionations */}
-            {allDestinations.map((oneDestination =>
-                <Destination key={oneDestination._id} singleDestination={oneDestination} img="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+            {allDestinations.slice(0).reverse().map((oneDestination =>
+                <Destination key={oneDestination._id} singleDestination={oneDestination}/>
             ))}
         </div>
     );

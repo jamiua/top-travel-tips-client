@@ -14,7 +14,7 @@ function Profile() {
                     <label>Profile Picture</label>
                     <div className="profile__form__picture">
                         <img
-                        src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                        src="https://images.unsplash.com/photo-1522673999312-93aa76caeda6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80"
                         alt=""
                         />
                         <label htmlFor="fileInput">

@@ -10,13 +10,14 @@
 body {
     margin: 0 auto;
     font-family: 'Proxima Nova Rg';
-    background-color: $primary-cta-color;
+    background-color: $background-color;
     min-width: $mobile-min;
     // max-width: $desktop-breakpoint;
 }
 
 // Page Header
 h1 {
+    color: $secondary-text-color;
     font-size: 24px;
     line-height: 32px;
     font-weight: 700;
@@ -29,7 +30,7 @@ h1 {
 
 // Section Header
 h2 {
-    color: $secondary-cta-color;
+    color: $tertiary-text-color;
     text-transform: uppercase;
     font-size: 12px;
     line-height: 20px;
@@ -43,6 +44,7 @@ h2 {
 
 // Subheader
 h3 {
+    color: $tertiary-text-color;
     font-size: 13px;
     line-height: 18px;
     font-weight: 700;
@@ -55,6 +57,7 @@ h3 {
 
 // Body Copy
 p {
+    color: $primary-text-color;
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;

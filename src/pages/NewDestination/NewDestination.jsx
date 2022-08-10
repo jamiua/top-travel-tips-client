@@ -20,11 +20,13 @@ function NewDestination() {
         if (file) {
             const data = new FormData();
             // Ensuring upload file names are unique by appending current date
-            const filename = Date.now() + file.originalname;
-            data.append("name", filename);
+            // const filename = Date.now() + file.name;
+            const filename = file.name;
+            data.append("imgname", filename);
             data.append("file", file);
             newDestination.photo = filename;
             console.log(newDestination);
+            console.log(file);
             try {
                 await axios.post("/upload", data);
             } catch (err) {}
@@ -61,7 +63,7 @@ function NewDestination() {
                     />
                     <input
                         className="newdestination__form__input"
-                        placeholder="Top Travel Tip Title"
+                        placeholder="Title your T3"
                         type="text"
                         autoFocus={true}
                         onChange={event => setTitle(event.target.value)}

@@ -7,14 +7,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url("../../assets/images/loginimg.jpg");
-    background-size: contain;
+    background: url("../../assets/images/registerimg.avif");
+    background-size:cover;
     // Refactor
     // background-size: cover;
     // background-repeat: no-repeat;
 
     &__title {
-        font-size: 50px;
+        font-size: 5rem;
+        color: $primary-text-color;
     }
 
     &__form {
@@ -42,10 +43,17 @@
             border: none;
             border-radius: 10px;
             text-align: center;
+            transition: .2s;
+
+            &:hover {
+                background-color: rgb(0, 97, 97);
+                transform: scale(1.1);
+            }
         }
 
         & > label {
             margin: 10px 0;
+            color: $primary-text-color;
         }
     }
 
@@ -59,5 +67,11 @@
         border: none;
         color: white;
         border-radius: 10px;
+        transition: .2s;
+
+        &:hover {
+            background-color: rgb(189, 63, 63);
+            transform: scale(1.1);
+        }
     }
 }

@@ -4,7 +4,7 @@
 .navbar {
     width: 100%;
     height: 3rem;
-    background-color: $cta-text-color;
+    background-color: $primary-text-color;
     position: sticky;
     top: 0;
     display: flex;
@@ -27,16 +27,19 @@
     &__list {
         @include reset-list;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         
         &__item {
+            color: $background-color;
             text-transform: uppercase;
             margin-right: 1rem;
             font-weight: 300;
+            transition: transform .2s;
             cursor: pointer;
 
             &:hover {
-                color: $secondary-cta-color;
+                color: $secondary-text-color;
+                transform: scale(1.5);
             }
         }
     }
@@ -52,11 +55,10 @@
         // }
 
         &__img {
-            width: 40px;
-            height: 40px;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: 50%;
-            object-fit: cover;
-            margin-right: 15px;
+            object-fit:cover;
             cursor: pointer;
         }
     }

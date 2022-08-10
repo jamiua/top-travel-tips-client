@@ -32,7 +32,7 @@ function Login() {
         <div className="login">
             <h2 className="login__title">Login</h2>
             <form className="login__form" onSubmit={handleLoginSubmit}>
-                <label>Username</label>
+                <label >Username</label>
                 <input className="login__form__input" type="text" placeholder="Enter your username..." ref={userRef}/>
                 <label>Password</label>
                 <input className="login__form__input" type="password" placeholder="Enter your password..." ref={passwordRef}/>
