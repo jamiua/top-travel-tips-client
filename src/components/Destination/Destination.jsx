@@ -9,8 +9,8 @@ function Destination({singleDestination}) {
     return (
         <main className="destination">
             {singleDestination.photo ? 
-                <img className="destination__image" src={publicFolder + singleDestination.photo} alt="" /> 
-                : <img className="destination__image" src="https://images.unsplash.com/photo-1526735334552-daff0bd6d53f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="" /> 
+                <img className="destination__image" src={publicFolder + singleDestination.photo} alt="" />
+                : <img className="destination__image" src={publicFolder + "placeholder.avif"} alt="beach view placeholder" /> 
             }
             <div className="destination__details"> 
                 <div className="destinationCats">

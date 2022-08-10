@@ -25,8 +25,8 @@ function NewDestination() {
             data.append("imgname", filename);
             data.append("file", file);
             newDestination.photo = filename;
-            console.log(newDestination);
-            console.log(file);
+            // console.log(newDestination);
+            // console.log(file);
             try {
                 await axios.post("/upload", data);
             } catch (err) {}

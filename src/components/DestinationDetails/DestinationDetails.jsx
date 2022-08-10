@@ -30,8 +30,9 @@ function DestinationDetails() {
     return (
         <div className="destinationdetails">
             <div className="destinationdetails__container">
-                {singleDestination.photo && 
-                    <img className="destinationdetails__img" src={publicFolder + singleDestination.photo} alt=""/>
+                {singleDestination.photo ? 
+                    <img className="destinationdetails__img" src={publicFolder + singleDestination.photo} alt=""/> :
+                    <img className="destinationdetails__img" src={publicFolder + "placeholder.avif"} alt=""/>
                 }
                 <h1 className="destinationdetails__title">
                 {singleDestination.title}
@@ -42,7 +43,7 @@ function DestinationDetails() {
                 </h1>
                 <div className="destinationdetails__poster">
                 <span className="destinationdetails__author">
-                    Author: {" "}
+                    Author:{" "}
                     <b >
                     <Link to={`/?user=${singleDestination.username}`} className="link">
                         {singleDestination.username}

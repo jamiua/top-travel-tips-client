@@ -8,7 +8,7 @@ import { Context } from "../../context/Context";
 function NavBar() {
     // Import user and dispatch from contexts
     const {user, dispatch} = useContext(Context);
-    console.log(user);
+    // console.log(user);
     
     const handleUserLogout = () => {
         dispatch({ type: "LOGOUT" });
